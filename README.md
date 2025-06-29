@@ -1,35 +1,99 @@
-# Spotify End-To-End Data Engineering Project
+# 🎧 Spotify End-To-End Data Engineering Project
 
-### Project Description:
+This project demonstrates a complete **ETL (Extract, Transform, Load)** pipeline using the **Spotify Web API** and various **AWS services**. It was designed to simulate a real-world, scalable data engineering workflow—from data ingestion to querying insights with Amazon Athena.
 
-In this project, we will build an ETL(Extract, Transform, Load) pipeline using the Spotify API on AWS. The pipeline will retrieve data from the Spotify API, transform it to desired format and load it into an AWS data storage service.
+---
 
-### Project Architecture: 
+## 🚀 Project Overview
+
+- Extract real-time music metadata from Spotify's public API  
+- Store raw data in Amazon S3 using AWS Lambda  
+- Transform and clean the data using serverless functions  
+- Catalog structured data using AWS Glue  
+- Query and analyze insights using Amazon Athena
+
+---
+
+## 🧠 Why This Project?
+
+This project was created to:
+- Practice building **automated data pipelines**
+- Work hands-on with **cloud-based tools** like AWS Lambda, S3, Glue, and Athena
+- Develop an understanding of real-time **API integration and orchestration**
+- Showcase practical **data engineering and cloud skills** in a portfolio-ready format
+
+---
+
+## 🛠️ Tools & Technologies Used
+
+| Tool               | Purpose                                |
+|--------------------|----------------------------------------|
+| **Python**         | Data extraction, transformation logic  |
+| **Spotify API**    | Source of music/artist metadata        |
+| **AWS S3**         | Raw data storage (object store)        |
+| **AWS Lambda**     | Serverless ETL orchestration           |
+| **AWS Glue Crawler**| Schema inference for S3 data         |
+| **Glue Data Catalog** | Metadata repository                |
+| **Amazon Athena**  | SQL-based querying on S3               |
+| **CloudWatch**     | Monitoring & Lambda logs               |
+
+---
+
+## 📊 Project Architecture
+
 ![Architecture Diagram](https://github.com/ArpiteshSrivastava/spotify-data-engineering-project/blob/main/Project%20Architecture%20Diagram.png)
 
+---
 
-### About Dataset/API Used:
-This API contains information about music artist, albums and songs - [Spotify API](https://developer.spotify.com/documentation/web-api)
+## 📦 Installation
 
-### Services Used:
-1. **S3 (Simple Storage Service):** Amazon S3 is a highly scalable object storage service that can store and retrieve any amount of data from anywhere on the web. It is commonly used to store and distribute large media files, data backups and static website files.
-
-2. **AWS Lambda:** AWS Lambda is a serverless computing service that lets you run your code without managing servers. You can use lambda to run code in response to events like changes in S3, DynamoDB or other AWS services.
-
-3. **Cloud Watch:** Amazon CloudWatch is a monitoring service for AWS resources and the applications you run on them. You can use CloudWatch to collect and track metrics, collect and monitor log files and set alarms.
-
-4. **Crawler:** AWS Glue Crawler is a fully managed service that automatically crawls your data sources, identifies data and infer schemas to create an AWS Glue Data Catalog.
-
-5. **Data Catalog:** AWS Glue Data Catalog is a fully managed metadata repository that makes it easy to discover and manage data in AWS. You can use the Glue Data Catalog with other AWS services, such as Athena.
-
-6. **Amazon Athena:** Athena is an interactive query service that makes it easy to analyze data in Amazon S3.You can use Athena to analyze data in your Glue Data Catalog or in other S3 buckets.
-
-### Install Packages:
-```
+Install required Python packages:
+```bash
 pip install pandas
 pip install numpy
 pip install spotipy
-```
 
-### Project Execution Flow
-Extract Data From Spotify API -> Lambda Trigger (every 1 hour) -> Run Extract Code -> Store Raw Data -> Trigger Tranform Function -> Tranform Data and Load it -> Query using Athena
+
+## 📦 Installation
+
+Install required Python packages:
+```bash
+pip install pandas
+pip install numpy
+pip install spotipy
+
+Spotify API (Track/Artist/Album Metadata)
+        ⬇
+AWS Lambda (Trigger every hour via CloudWatch)
+        ⬇
+Raw Data stored in Amazon S3
+        ⬇
+Transform Function triggered via Lambda
+        ⬇
+Cleaned Data stored in S3 (processed zone)
+        ⬇
+AWS Glue Crawler detects schema
+        ⬇
+Glue Data Catalog created/updated
+        ⬇
+Amazon Athena used to query and analyze data
+
+Spotify-Data-Pipeline-Project/
+│
+├── spotify_api_data_extract.py              # Data extraction from Spotify API
+├── spotify_transformation_load_function.py  # Data cleaning and loading
+├── Spotify Data Pipeline (ETL).ipynb        # ETL walkthrough in notebook format
+├── Project Architecture Diagram.png         # Architecture visualization
+├── ETL Process.png                          # ETL visual overview
+└── README.md
+
+
+---
+
+Once you've pasted it into your `README.md` file:
+
+### 👉 Then in your terminal:
+```bash
+git add README.md
+git commit -m "Updated README with professional structure and content"
+git push
