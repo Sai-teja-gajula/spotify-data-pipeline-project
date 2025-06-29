@@ -86,14 +86,3 @@ Spotify-Data-Pipeline-Project/
 ├── Project Architecture Diagram.png         # Architecture visualization
 ├── ETL Process.png                          # ETL visual overview
 └── README.md
-
-
----
-
-Once you've pasted it into your `README.md` file:
-
-### 👉 Then in your terminal:
-```bash
-git add README.md
-git commit -m "Updated README with professional structure and content"
-git push
