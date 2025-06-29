@@ -41,7 +41,7 @@ This project was created to:
 
 ## 📊 Project Architecture
 
-![Architecture Diagram](https://github.com/ArpiteshSrivastava/spotify-data-engineering-project/blob/main/Project%20Architecture%20Diagram.png)
+![Architecture Diagram](https://github.com/Sai-teja-gajula/spotify-data-pipeline-project/blob/main/Project%20Architecture%20Diagram.png)
 
 ---
 
